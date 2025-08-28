@@ -1,0 +1,193 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    /* margin: 0;
+    padding: 0; */
+    background-color: #432818;
+    line-height: 1.6;
+}
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #6f1d1b;
+    color: #ffe6a7
+}
+
+.pergunta1{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+nav ul {
+    list-style: none;           /* Remove os pontinhos da lista */
+    display: flex;              /* Alinha os itens lado a lado (em linha) */
+    justify-content: center;    /* Centraliza os itens horizontalmente */
+    gap: 20px;                  /* Espaço de 20px entre cada item */
+    margin-top: 15px;           /* Dá um respiro acima do menu */
+    flex-wrap: wrap;
+    font-weight: 600
+    
+    /* font-weight: 600;          /* Deixa o texto mais marcante */
+    /* font-family: 'Poppins', sans-serif; Fonte moderna e legível */ 
+    
+}
+
+nav a {
+  color: #BB9457;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem
+  
+}
+
+main {
+  padding: 20px; /* Espaçamento interno do conteúdo principal */
+}
+
+section {
+  margin-bottom: 100px; /* Espaço entre seções */
+}
+
+#produtos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* ou space-around / space-between */
+  gap: 100px;
+  padding: 20px;
+  margin-left: -20px
+}
+
+.produto {
+  width: 250px;
+  background-color: #FFE6A7;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+}
+
+
+.produto img {
+  width: 100%;
+  border: radius 10px
+}
+
+
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+th, td {
+  border: 1px solid #99582A;
+  padding: 10px;
+  text-align: left;
+  background-color: #BB9457;
+  color: #432818;
+}
+
+contato {
+  padding: 20px;
+}
+
+form {
+  background-color: #FFE6A7;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: #432818;
+}
+
+form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #6F1D1B;
+}
+
+input, textarea, select {
+  padding: 10px;
+  border: 1px solid #BB9457;
+  border-radius: 5px;
+  background-color: #FFF8E1;
+  color: #432818;
+  font-size: 1em;
+}
+
+textarea::placeholder {
+  color: #99582A;
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #6F1D1B;
+}
+
+input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+
+button {
+  background-color: #BB9457;
+  color: #432818;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #99582A;
+  transform: scale(1.03);
+}
+
+footer {
+  background-color: #6F1D1B;
+  color: #FFE6A7;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .produto {
+    max-width: 90%;
+    text-align: center;
+  }
+
+  form {
+    max-width: 90%;
+  }
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cardápio digital de Cafés. Cadastre o seu pedido em nosso site!">
+    <title>Café Favorito</title> 
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <header class="topo-vermelho">
+            <img src="assets/images/logo.jpg.png" alt="Logo Café Favorito" class="logo">
+            <div class="texto-header">
+        
+            </div>
+    </header>
+        <h1>Bem-vindo ao seu Cardápio Favorito</h1>
+        <p class="pergunta1">Qual o seu café de hoje?</p>
+        <nav>
+            <ul>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#tabela">Tabela de Preços</a></li>
+                <li><a href="#contato">Faça seu Pedido</a></li>
+            </ul>
+        </nav>
+
+    </header>
+     <main>
+    <section id="produtos">
+      <h2>Nossos Cafés</h2>
+      <article class="produto">
+        <img src="assets/images/americano.jpg" alt="Americano">
+        <h3>Americano</h3>
+        <p>Café dose dupla de espresso.</p> <br><br>
+      </article>
+      <article class="produto">
+        <img src="assets/images/caramelo.jpg" alt="caramelo">
+        <h3>Café Caramelo</h3>
+        <p>Café espresso, leite vaporizado e calda de caramelo.</p>
+      </article>
+      <article class="produto">
+        <img src="assets/images/latte.jpg" alt="latte">
+        <h3>Café Latte</h3>
+        <p>Café espresso e leite vaporizado.</p>
+      </article>
+      <article class="produto">
+        <img src="assets/images/cappuccino.jpg" alt="Cappuccino">
+        <h3>Cappuccino</h3>
+        <p>Cappuccino com leite vaporizado, chocolate e canela.</p>
+      </article>
+      <article class="produto">
+        <img src="assets/images/mochaccino.jpg" alt="Mochaccino">
+        <h3>Mochaccino</h3>
+        <p>Café espresso, leite vaporizado e calda de chocolate.</p>
+      </article>
+    </section>
+
+     <section id="tabela">
+      <h2>Tabela de Preços</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Produto</th>
+            <th>Preço</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Americano</td><td>R$9,00</td></tr>
+          <tr><td>Café Caramelo</td><td>R$10,00</td></tr>
+          <tr><td>Café Latte</td><td>R$10,00</td></tr>
+          <tr><td>Cappuccino</td><td>R$10,00</td></tr>
+          <tr><td>Mochaccino</td><td>R$10,00</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+
+  <section id="contato">
+  <h2>Faça seu Pedido</h2>
+  <form action="processa-pedido.php" method="post">
+    
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required>
+
+    <label for="telefone">Telefone:</label>
+    <input type="tel" id="telefone" name="telefone" placeholder="(xx) xxxxx-xxxx" required>
+
+     <fieldset>
+      <legend>Escolha seus produtos:</legend>
+      <label><input type="checkbox" name="produtos[]" value="Americano"> Americano – R$9,00</label><br>
+      <label><input type="checkbox" name="produtos[]" value="Café Caramelo"> Café Caramelo – R$10,00</label><br>
+      <label><input type="checkbox" name="produtos[]" value="Café Latte"> Café Latte – R$10,00</label><br>
+      <label><input type="checkbox" name="produtos[]" value="Cappuccino"> Cappuccino – R$10,00</label><br>
+      <label><input type="checkbox" name="produtos[]" value="Mochaccino"> Mochaccino – R$10,00</label>
+    </fieldset>
+
+    <label for="pagamento">Forma de pagamento:</label>
+    <select id="pagamento" name="pagamento" required>
+      <option value="">-- Escolha --</option>
+      <option value="pix">PIX</option>
+      <option value="cartao">Cartão de Crédito</option>
+      <option value="dinheiro">Dinheiro</option>
+    </select>
+
+    <label for="observacoes">Observações:</label>
+    <textarea id="observacoes" name="observacoes" rows="4" placeholder="Ex: Sem açúcar, entregar às 15h..."></textarea>
+
+    <button type="submit">Enviar Pedido</button>
+  </form>
+</section>
+
+<footer>
+    <p>📞 Peça já: (01) 1234-5678</p>
+  </footer>
+</body>
+</html>
